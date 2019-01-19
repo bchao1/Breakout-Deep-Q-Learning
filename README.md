@@ -16,4 +16,4 @@ Please refer to `model.py`. The action space is set to have dimension 3 (left, r
 - Optimizer: RMSprop(lr = 0.00025, alpha = 0.95, eps = 0.01)
 
 ## Result
-![](./reward.PNG)
+![](./reward.png)
