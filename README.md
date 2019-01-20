@@ -1,10 +1,12 @@
 # Deep Q Learning : Atari Breakout
 Our actor can achieve an average reward of about 80 over 100 episodes (we didn't have much time to tune the parameters...). We basically followed settings from the Deepmind Q Learning paper.
+
+
 ## Settings 
 ### Deep Q Learning with Experience Replay
 ![algo](./img/experience_replay.png)
 
-Introducing experience replay and the target network, we have more stable input and output pairs to train our main network.
+Introducing experience replay and the target network, we have more stable input and output pairs to train our main network. The target Q values Q' is retrieved using the target network in the experience replay steps. We hope to match the actual Q value outputted by the main network with Q'.
 
 ### Preprocessing 
 Each frame is converted to grayscale (single channel) and then resized to 84 * 84. We save each grayscale image * 255 as an np.int array since this saves memory (compared to floating point numbers), which is important in Q-learning since we have to keep a list of history data. 
@@ -41,7 +43,7 @@ The blue line is the original quadratic loss. The green line is the huber loss.
 - Reward discount factor: 0.99
 - 4 previous frames concatenated as the actor network input (size 4 * 1 * 84 * 84).
 - Target network update rate: every 10000 steps. Every 10000 steps, the weights are synchronized with the main actor network.
-- Maximum number of no-op steps every episode: 30 (to avoid over-fitting)
+- Maximum number of no-op steps every episode: 30 (to avoid sub-optimal solutions)
 
 ## Result
 ### Unclipped reward
