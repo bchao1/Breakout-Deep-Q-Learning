@@ -1,6 +1,9 @@
 # Deep Q Learning : Atari Breakout
 Our actor can achieve an average reward of about 80 over 100 episodes (we didn't have much time to tune the parameters...). We basically followed settings from the Deepmind Q Learning paper.
 
+||||||
+|---|---|---|---|---|
+|![Game 1](./gifs/play1.gif)|![Game 2](./gifs/play2.gif)|![Game 3](./gifs/play3.gif)|![Game 4](./gifs/play4.gif)|![Game 5](./gifs/play5.gif)|
 
 ## Settings 
 ### Deep Q Learning with Experience Replay
